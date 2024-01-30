@@ -1,25 +1,79 @@
-header {
-    background-color: midnightblue;
-    padding: 1rem;
+:root{
+    --base-color: 240, 60%;
+}
+body {
     margin: 0;
-    width: 100%;
-    height: auto;
+}
+
+.wrapper {
+    min-height: 93vh;
+    display: flexbox;
+    flex-direction: column;
+}
+
+header {
+    background-color: hsl(var(--base-color), 30%);
+    padding: 40px;
     text-align: center;
-    color: white;
+    color: hsl(var(--base-color), 100%);
     font-weight: bold;
-    font-size: larger;
+    font-size: 1.5rem;
+}
+
+ul {
+    display: flex;
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    border: 1.5px solid lightgray;
+    border-top: 0;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: hsl(var(--base-color), 40%);
+    box-shadow: 0 2px 1px lightgray;
+    transform: scale(1);
+    transition: transform 1s, box-shadow 1s ease;
+}
+
+a:hover {
+    background: hsl(var(--base-color), 20%);
+    box-shadow: 4px 7px 5px lightgray;
+    transform: scale(1.2);
+    color: hsl(var(--base-color), 100%);
+    transition: transform 1.25s, box-shadow 1s ease;
 }
 
 h1 {
-    color: hsl(187, 89%, 52%);
+    color: hsl(var(--base-color), 40%);
 }
+
+section{
+    padding: 10px 20px;
+    transition: padding 1s;
+}
+
+section:hover {
+    h1 {
+        color: hsl(var(--base-color), 100%);
+    }
+    background-color: hsl(var(--base-color), 25%);
+    color: hsl(var(--base-color), 100%);
+    padding: 15px 30px;
+    transition: padding 1s;
+}
+
 footer {
+    margin-top: auto;
     padding: 1rem;
     text-align: center;
     border-top: 1px solid black
-}
-
-div {
-    display: flex;
-    gap: 20px;
 }
